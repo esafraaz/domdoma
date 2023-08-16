@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js dom summery.</title>
+</head>
+<body>
+    <h1>Final Dom Event Handler.</h1>
+    <h1 id = 'text'>Text to change. .. ..</h1>
+    <button  onclick="handleOneClick()">Add onclick</button>
+    <button id="but">Add onclick by id</button>
+
+    <h1>From event ..</h1>
+    <h1>
+        hey, bro . I'm going to disapare.
+    </h1>
+
+
+    <h1>This is a input system.</h1>
+    <p id="inputText">
+        Type your name...
+    </p>
+    <input id="inputField" type="text"><input id="inputButton" type="button" value="Text">
+    <script>
+        function handleOneClick(){
+            const text = (document.getElementById('text'))
+            text.innerText= 'suee......................'
+        }
+        document.getElementById('but').addEventListener('click', function(){
+            const text = (document.getElementById('text'))
+            text.innerText= 'ankara messi ankara messi'
+        })
+        const nameText = document.getElementById('inputField').value
+        document.getElementById('inputButton').addEventListener('click', function(){
+            const nameText = document.getElementById('inputField')
+            document.getElementById('inputText').innerText = nameText.value;
+            nameText.value = ''
+            
+        })
+
+    </script>
+</body>
+</html>
